@@ -7,19 +7,28 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Jeopardy</title>
+    <title>This Is JEOPARDY!</title>
     <link
       href="https://fonts.googleapis.com/css?family=Copse&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="jeopardy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="title" align="center">
-      <h1>JEOPARDY!</h1>
-    </div>
-    <table id="jeopardy"></table>
-    <button id="restart game">Restart Game</button>
+    <header class="center-text">
+      <h1 align="center">JEOPARDY!</h1>
+      <button id="start">Let's Begin</button></div>
+    </header>
+    <div class="title" align="center"></div>
+    <br><br>
+    <table id="jeopardy">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
     <script src="https://unpkg.com/jquery"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
     <script src="https://unpkg.com/lodash"></script>

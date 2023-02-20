@@ -11,29 +11,81 @@ body {
 }
 
 h1 {
-  font-size: 75px;
+  font-size: 60px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #060ce9;
   text-shadow: 1px 1px yellow;
 }
 
 #jeopardy {
-  background-color: #115ff4;
-}
-
-button {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 20px;
-  background-color: #28a200;
   text-align: center;
-  text-decoration: none;
-  border-radius: 4px 4px;
-  border-color: white;
-  transition-duration: 0.2s;
+  font-size: 9pt;
+  background-color: #060ce9;
+  color: white;
+  border-collapse: collapse;
+  margin: 0 auto;
 }
 
-button:hover {
+#jeopardy th,
+#jeopardy td {
+  border: solid 1px white;
+  width: 10em;
+  padding: 0.5em;
+}
+
+#jeopardy td.disabled {
   background-color: #28a200;
-  color: white;
+}
+
+th {
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  height: 4em;
+  text-shadow: darkgoldenrod 1px 1px;
+}
+
+td {
+  height: 8em;
+  font-family: Copse, serif;
+}
+
+button,
+td {
+  cursor: pointer;
+}
+
+.fa-question-circle {
+  pointer-events: none;
+}
+
+.center-text {
+  text-align: center;
+}
+
+#start {
+  background-color: #c6d709;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  margin: 0.75em 0;
+}
+
+#start:hover,
+#start.disabled {
+  background-color: #c6d709;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+#spin-container {
+  font-size: 12em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 25px;
+  display: none;
 }
