@@ -5,3 +5,35 @@
   #8d2ab5
   #74119c
 */
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-size: 75px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #060ce9;
+  text-shadow: 1px 1px yellow;
+}
+
+#jeopardy {
+  background-color: #115ff4;
+}
+
+button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  background-color: #28a200;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px 4px;
+  border-color: white;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  background-color: #28a200;
+  color: white;
+}

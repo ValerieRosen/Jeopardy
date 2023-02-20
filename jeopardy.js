@@ -1,3 +1,7 @@
+const BASE_API_URL = "http://jservice.io/api/";
+const NUM_CATEGORIES = 6;
+const NUM_CLUES_PER_CAT = 5;
+
 // categories is the main data structure for the app; it looks like this:
 
 //  [
@@ -20,13 +24,18 @@
 
 let categories = [];
 
-
 /** Get NUM_CATEGORIES random category from API.
  *
  * Returns array of category ids
  */
 
-function getCategoryIds() {
+async function getCategoryIds() {
+  // asking for 100 categories so we can randomize
+  const response = await axios.get(`${BASE_API_URL}categories`, {
+    params: { count: 100 },
+  });
+  let catIDs = response.data.map((c) => c.id);
+  return _.samples(catIDs, NUM_CATEGORIES);
 }
 
 /** Return object with data about a category:
@@ -41,8 +50,7 @@ function getCategoryIds() {
  *   ]
  */
 
-function getCategory(catId) {
-}
+function getCategory(catId) {}
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
  *
@@ -52,8 +60,7 @@ function getCategory(catId) {
  *   (initally, just show a "?" where the question/answer would go.)
  */
 
-async function fillTable() {
-}
+async function fillTable() {}
 
 /** Handle clicking on a clue: show the question or answer.
  *
@@ -63,21 +70,17 @@ async function fillTable() {
  * - if currently "answer", ignore click
  * */
 
-function handleClick(evt) {
-}
+function handleClick(evt) {}
 
 /** Wipe the current Jeopardy board, show the loading spinner,
  * and update the button used to fetch data.
  */
 
-function showLoadingView() {
-
-}
+function showLoadingView() {}
 
 /** Remove the loading spinner and update the button used to fetch data. */
 
-function hideLoadingView() {
-}
+function hideLoadingView() {}
 
 /** Start game:
  *
@@ -86,8 +89,7 @@ function hideLoadingView() {
  * - create HTML table
  * */
 
-async function setupAndStart() {
-}
+async function setupAndStart() {}
 
 /** On click of start / restart button, set up game. */
 
